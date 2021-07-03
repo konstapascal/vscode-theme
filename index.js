@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const os = require('os');
 
 const userOS = os.platform();
@@ -7,4 +9,4 @@ if (userOS === 'win32') vscodePath = 'Win';
 if (userOS === 'linux') vscodePath = 'Linux';
 if (userOS === 'darwin') vscodePath = 'Mac';
 
-console.log(userOs, vscodePath);
+console.log(userOS, vscodePath);
