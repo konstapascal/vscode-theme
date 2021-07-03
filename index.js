@@ -1,12 +1,17 @@
 #!/usr/bin/env node
 
+// IMPORTS
 const os = require('os');
+const minimist = require('minimist');
 
-const userOS = os.platform();
+const getVscodeSettingsPath = require('./lib/getVscodeSettingsPath');
 
-let vscodePath;
-if (userOS === 'win32') vscodePath = 'Win';
-if (userOS === 'linux') vscodePath = 'Linux';
-if (userOS === 'darwin') vscodePath = 'Mac';
+// START OF SCRIPT
+const platform = os.platform();
+const vscodeSettingsPath = getVscodeSettingsPath(platform);
 
-console.log(userOS, vscodePath);
+const parsedArgv = minimist(process.argv.slice(2));
+let cmd = parsedArgv._[0] || 'help';
+
+console.log(parsedArgv);
+console.log(cmd);

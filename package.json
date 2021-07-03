@@ -4,7 +4,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
-		"vsc-tc": "./index.js"
+		"vsc-theme": "./index.js"
 	},
 	"keywords": [],
 	"author": "Konstantinos Pascal",
@@ -12,7 +12,6 @@
 	"description": "Node module for changing your VS Code theme from within the command line.",
 	"name": "vscode-theme",
 	"version": "1.0.0",
-	"devDependencies": {},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/konstapascal/vscode-theme.git"
@@ -20,5 +19,8 @@
 	"bugs": {
 		"url": "https://github.com/konstapascal/vscode-theme/issues"
 	},
-	"homepage": "https://github.com/konstapascal/vscode-theme#readme"
+	"homepage": "https://github.com/konstapascal/vscode-theme#readme",
+	"dependencies": {
+		"minimist": "^1.2.5"
+	}
 }
