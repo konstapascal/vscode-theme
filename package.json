@@ -10,15 +10,15 @@
 	"author": "Konstantinos Pascal",
 	"license": "ISC",
 	"description": "Node module for changing your VS Code theme from within the command line.",
-	"name": "vscode-theme-changer",
+	"name": "vscode-theme",
 	"version": "1.0.0",
 	"devDependencies": {},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/konstapascal/vscode-theme-changer.git"
+		"url": "git+https://github.com/konstapascal/vscode-theme.git"
 	},
 	"bugs": {
-		"url": "https://github.com/konstapascal/vscode-theme-changer/issues"
+		"url": "https://github.com/konstapascal/vscode-theme/issues"
 	},
-	"homepage": "https://github.com/konstapascal/vscode-theme-changer#readme"
+	"homepage": "https://github.com/konstapascal/vscode-theme#readme"
 }

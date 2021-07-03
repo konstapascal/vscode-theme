@@ -1,1 +1,1 @@
-## vscode-theme-changer
+## vscode-theme
