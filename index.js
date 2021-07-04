@@ -1,17 +1,34 @@
 #!/usr/bin/env node
 
-// IMPORTS
 const os = require('os');
 const minimist = require('minimist');
 
-const getVscodeSettingsPath = require('./lib/getVscodeSettingsPath');
+const getSettingsPath = require('./lib/getSettingsPath');
+
+const list = require('./cmds/list');
+const set = require('./cmds/set');
 
 // START OF SCRIPT
 const platform = os.platform();
-const vscodeSettingsPath = getVscodeSettingsPath(platform);
+const settingsPath = getSettingsPath(platform);
 
-const parsedArgv = minimist(process.argv.slice(2));
-let cmd = parsedArgv._[0] || 'help';
+const args = minimist(process.argv.slice(2));
+let subcmd = args._[0];
 
-console.log(parsedArgv);
-console.log(cmd);
+switch (subcmd) {
+	case 'list':
+		list();
+		break;
+
+	case 'set':
+		set(args);
+		break;
+
+	case undefined:
+		console.error('No subcommand was provided!');
+		break;
+
+	default:
+		console.error(`"${subcmd}" is not a valid subcommand!`);
+		break;
+}
