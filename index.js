@@ -21,20 +21,28 @@ if (args.h || args.help) subcmd = 'help';
 if (args.v || args.version) subcmd = 'version';
 
 switch (subcmd) {
-	case 'help':
-		help();
-		break;
-
-	case 'version':
-		version();
+	case 'set':
+		set(args, settingsPath);
 		break;
 
 	case 'list':
 		list();
 		break;
 
-	case 'set':
-		set(args, settingsPath);
+	case 'add':
+		add(args);
+		break;
+
+	case 'remove':
+		remove(args);
+		break;
+
+	case 'help':
+		help();
+		break;
+
+	case 'version':
+		version();
 		break;
 
 	default:
