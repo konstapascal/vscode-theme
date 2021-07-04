@@ -1,5 +1,7 @@
+const VSCODE_THEMES = require('../data/themes');
+
 function list() {
-	console.log('List of themes coming soon!');
+	console.log(VSCODE_THEMES);
 }
 
 module.exports = list;
