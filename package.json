@@ -21,6 +21,7 @@
 	},
 	"homepage": "https://github.com/konstapascal/vscode-theme#readme",
 	"dependencies": {
+		"chalk": "^4.1.1",
 		"minimist": "^1.2.5"
 	}
 }
