@@ -11,7 +11,8 @@ const VSCODE_THEMES = [
 	'Quiet Light',
 	'Red',
 	'Solarized Dark',
-	'Solarized Light'
+	'Solarized Light',
+	'Tomorrow Night Blue'
 ];
 
 module.exports = VSCODE_THEMES;
