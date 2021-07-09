@@ -7,6 +7,9 @@ const getSettingsPath = require('./lib/getSettingsPath');
 
 const list = require('./cmds/list');
 const set = require('./cmds/set');
+const add = require('./cmds/add');
+const remove = require('./cmds/remove');
+
 const help = require('./cmds/help');
 const version = require('./cmds/version');
 
@@ -22,7 +25,7 @@ if (args.v || args.version) subcmd = 'version';
 
 switch (subcmd) {
 	case 'set':
-		set(args, settingsPath);
+		set(args, settingsPath, platform);
 		break;
 
 	case 'list':
