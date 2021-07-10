@@ -2,7 +2,7 @@ const chalk = require('chalk');
 
 function help() {
 	console.log(`
-	${chalk.greenBright('vsc-theme')} ${chalk.blueBright('[subcommand]')} ${chalk.yellowBright(
+	${chalk.greenBright('vscode')} ${chalk.blueBright('[subcommand]')} ${chalk.yellowBright(
 		'<options>'
 	)}
 

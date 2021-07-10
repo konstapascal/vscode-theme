@@ -4,7 +4,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
-		"vsc-theme": "./index.js"
+		"vscode": "./index.js"
 	},
 	"keywords": [],
 	"author": "Konstantinos Pascal",
