@@ -6,15 +6,10 @@
 <h4 align="center">CLI application which you can use to easily change your VSC theme.</h4>
 
 <p align="center">
-  <a href="#links">Links</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-install">How To Install</a> •
   <a href="#technologies">Technologies</a>
 </p>
-
-## Links
-
--  https://npmjs.com/package/vscode-theme
 
 ## Key Features
 
