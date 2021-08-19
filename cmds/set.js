@@ -1,12 +1,13 @@
 const fs = require('fs');
+const path = require('path');
 
 function set(args, settingsPath, platform) {
-	const theme = args._[1];
-	const themeExists = JSON.parse(
-		fs.readFileSync('../data/themes.txt', { encoding: 'utf-8' })
-	).includes(theme);
+	const providedTheme = args._[1];
 
-	if (!theme) return console.error('No theme was provided!');
+	const themesPath = path.join(__dirname, '..', 'data', 'themes.txt');
+	const themeExists = JSON.parse(fs.readFileSync(themesPath)).includes(providedTheme);
+
+	if (!providedTheme) return console.error('No theme was provided!');
 	if (!themeExists) return console.error('The provided theme does not exist!');
 
 	let settingsPathWithoutEnv =
@@ -15,10 +16,10 @@ function set(args, settingsPath, platform) {
 			: settingsPath.replace('$HOME', process.env.HOME);
 
 	try {
-		const jsonSettings = fs.readFileSync(settingsPathWithoutEnv, { encoding: 'utf8' });
+		const jsonSettings = fs.readFileSync(settingsPathWithoutEnv);
 		const jsonSettingsParsed = JSON.parse(jsonSettings);
 
-		jsonSettingsParsed['workbench.colorTheme'] = theme;
+		jsonSettingsParsed['workbench.colorTheme'] = providedTheme;
 
 		fs.writeFileSync(settingsPathWithoutEnv, JSON.stringify(jsonSettingsParsed));
 	} catch (err) {
