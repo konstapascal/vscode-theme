@@ -1,7 +1,11 @@
-const VSCODE_THEMES = require('../data/themes');
+const fs = require('fs');
+const path = require('path');
 
 function list() {
-	console.log(VSCODE_THEMES);
+	const themesPath = path.join(__dirname, '..', 'data', 'themes.txt');
+	const themes = JSON.parse(fs.readFileSync(themesPath));
+
+	console.log(themes);
 }
 
 module.exports = list;

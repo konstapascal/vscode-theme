@@ -1,10 +1,10 @@
 const fs = require('fs');
 
-const VSCODE_THEMES = require('../data/themes');
-
 function set(args, settingsPath, platform) {
 	const theme = args._[1];
-	const themeExists = VSCODE_THEMES.includes(theme);
+	const themeExists = JSON.parse(
+		fs.readFileSync('../data/themes.txt', { encoding: 'utf-8' })
+	).includes(theme);
 
 	if (!theme) return console.error('No theme was provided!');
 	if (!themeExists) return console.error('The provided theme does not exist!');
